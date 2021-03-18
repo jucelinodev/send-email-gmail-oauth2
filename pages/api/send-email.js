@@ -13,7 +13,7 @@ export default async (req, res) => {
   }
 
   try {
-    const result = transporter.sendMail({
+    const result = await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: email,
       subject: "Envio de Email Jucelino Novais",
